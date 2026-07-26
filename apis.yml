@@ -1,8 +1,24 @@
 aid: diamanti
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/diamanti.png
 name: Diamanti
-description: 'Diamanti is a company surfaced as a portfolio company of threshold-ventures and added to
-  the API Evangelist network as a stub for enrichment. Sector: developer-tools. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: 'Diamanti was a San Jose, California infrastructure company (founded 2014) that built hyperconverged,
+  bare-metal infrastructure purpose-built for containers and Kubernetes. Its flagship Ultima platform paired
+  plug-and-play appliances with hardware-accelerated networking and storage I/O cards, and its Spektra software
+  added multi-cluster, hybrid-cloud Kubernetes management across on-premises and public-cloud environments. As of
+  this enrichment pass the company appears to be defunct / to have ceased operations: www.diamanti.com resolves but
+  returns a captcha-walled placeholder (HTTP 202, noindex) with no reachable developer portal, documentation, SDKs,
+  or public API surface.'
 url: https://raw.githubusercontent.com/api-evangelist/diamanti/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +28,20 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Developer Tools
+- Infrastructure
+- Kubernetes
+- Containers
+- Hyperconverged Infrastructure
+- Bare Metal
+- Cloud
+- DevOps
+- Storage
+x-status: defunct-or-parked
+x-status-note: 'www.diamanti.com returns HTTP 202 SiteGround captcha challenge (noindex); no live developer/API surface reachable as of 2026-07-18. No first-party packages (npm/PyPI/Go), no OpenAPI, GitHub org has 0 public repos.'
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +49,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/diamanti-domain-security.yml
 - type: Website
   url: https://www.diamanti.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
